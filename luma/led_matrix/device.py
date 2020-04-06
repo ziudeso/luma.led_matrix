@@ -205,7 +205,7 @@ class ws2812(device):
     .. versionadded:: 0.4.0
     """
     def __init__(self, dma_interface=None, width=8, height=4, cascaded=None,
-                 rotate=0, mapping=None, pin=18, brightness=255, freq_hz=800000, **kwargs):
+                 rotate=0, mapping=None, pin=18, channel=0, brightness=255, freq_hz=800000, **kwargs):
         super(ws2812, self).__init__(const=None, serial_interface=noop)
 
         # Derive (override) the width and height if a cascaded param supplied
@@ -229,7 +229,8 @@ class ws2812(device):
         #pin = 18
         #TODO: mine
         # brightness = 255
-        channel = 0
+        #TODO: mine
+        #channel = 0
         dma = 10
         #TODO: mine
         #freq_hz = 800000
